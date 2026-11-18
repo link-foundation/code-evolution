@@ -443,19 +443,27 @@ h1 {
   line-height: 1.5;
 }
 
-.evidence-links {
+.evidence-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
   margin-top: 9px;
 }
 
-.evidence-link {
+.evidence-button {
   border: 1px solid var(--line);
   border-radius: 5px;
   padding: 4px 6px;
+  background: transparent;
+  color: var(--accent);
   font: 0.74rem var(--mono);
   overflow-wrap: anywhere;
+  text-align: left;
+  cursor: pointer;
+}
+
+.evidence-button:hover {
+  text-decoration: underline;
 }
 
 .limits,

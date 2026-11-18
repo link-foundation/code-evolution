@@ -174,19 +174,18 @@ function renderCoupling() {
   }
 }
 
-function evidenceLink(evidence) {
+function evidenceButton(evidence) {
   const event = byCommit
     .get(evidence.commit)
     ?.find(({ id }) => id === evidence.id);
   const label = event ? changeLabel(event) : evidence.path;
-  const link = make(
-    'a',
-    'evidence-link',
+  const button = make(
+    'button',
+    'evidence-button',
     `${evidence.commit.slice(0, 8)} · ${label}`
   );
-  link.href = `#commit-${evidence.commit}`;
-  link.addEventListener('click', (click) => {
-    click.preventDefault();
+  button.type = 'button';
+  button.addEventListener('click', () => {
     filter.value = '';
     renderTimeline(evidence);
     const target = byId(`commit-${evidence.commit}`);
@@ -199,7 +198,7 @@ function evidenceLink(evidence) {
       row.scrollIntoView({ block: 'center' });
     }
   });
-  return link;
+  return button;
 }
 
 function renderPatterns() {
@@ -211,14 +210,14 @@ function renderPatterns() {
     const count =
       report.repeatedPatterns.find(({ id }) => id === patternId)?.count ??
       evidence.length;
-    const links = make('div', 'evidence-links');
+    const evidenceActions = make('div', 'evidence-actions');
     for (const entry of evidence.slice(0, 10)) {
-      links.append(evidenceLink(entry));
+      evidenceActions.append(evidenceButton(entry));
     }
     card.append(
       make('strong', '', `${count} occurrences`),
       make('p', '', message),
-      links
+      evidenceActions
     );
     container.append(card);
   }
