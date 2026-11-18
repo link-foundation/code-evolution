@@ -2,7 +2,7 @@ import { spawnSync } from 'node:child_process';
 import { mkdtemp, mkdir, rename, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { pathToFileURL, URL } from 'node:url';
+import { fileURLToPath, pathToFileURL, URL } from 'node:url';
 import { extractEvolution } from '../../src/evolution/index.js';
 
 const initial = {
@@ -109,5 +109,11 @@ if (
     '../universal-app/evolution/sample-report.json',
     import.meta.url
   );
-  await writeFile(destination, `${JSON.stringify(report, null, 2)}\n`);
+  const { format, resolveConfig } = await import('prettier');
+  const filepath = fileURLToPath(destination);
+  const options = await resolveConfig(filepath);
+  await writeFile(
+    destination,
+    await format(JSON.stringify(report, null, 2), { ...options, filepath })
+  );
 }

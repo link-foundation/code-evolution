@@ -41,7 +41,7 @@ describe('evolution input and report formats', () => {
         ),
         'utf8'
       );
-      assert.equal(`${JSON.stringify(report, null, 2)}\n`, sample);
+      assert.deepEqual(report, JSON.parse(sample));
       assert.ok(isReport(report));
       assert.equal(isReport({ ...report, events: [null] }), false);
       assert.equal(isReport({ ...report, schemaVersion: 2 }), false);
