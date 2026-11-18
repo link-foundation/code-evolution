@@ -1,0 +1,12 @@
+report: document
+  actions: stack
+    direction horizontal
+    upload: button
+      label 'Open JSON'
+      variant filled
+      on press
+        navigate upload
+    sample: button
+      label 'Reset sample'
+      on press
+        navigate sample

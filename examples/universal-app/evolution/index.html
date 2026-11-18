@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore changes, hotspots, and evidence from bounded Git history."
+    />
+    <link rel="icon" href="data:," />
+    <title>Code Evolution</title>
+  </head>
+  <body>
+    <header class="top">
+      <div class="shell top-inner">
+        <a class="brand" href="./"
+          ><span class="brand-mark" aria-hidden="true">↳</span> Code
+          Evolution</a
+        >
+        <a
+          class="source-link"
+          href="https://github.com/link-foundation/code-evolution"
+          >View on GitHub ↗</a
+        >
+      </div>
+    </header>
+    <main class="shell">
+      <header class="intro">
+        <h1>Follow the changes.</h1>
+        <p>
+          See how files, functions, and classes evolve across a Git history.
+        </p>
+      </header>
+      <div class="report-toolbar">
+        <div>
+          <p class="eyebrow">REPORT</p>
+          <strong id="report-name">Formatting utilities</strong>
+        </div>
+        <div class="report-controls">
+          <div id="report-actions"></div>
+          <input
+            id="report-file"
+            type="file"
+            accept=".json,application/json"
+            hidden
+          />
+        </div>
+      </div>
+      <p class="notice" id="notice" role="status" hidden></p>
+      <dl class="metrics" id="metrics"></dl>
+      <div class="columns">
+        <section class="panel" aria-labelledby="timeline-title">
+          <div class="panel-heading">
+            <div>
+              <h2 id="timeline-title">Commit timeline</h2>
+            </div>
+            <label class="filter" for="change-kind">
+              <span>Show</span>
+              <select id="change-kind">
+                <option value="">All changes</option>
+                <option value="file">Files</option>
+                <option value="function">Functions</option>
+                <option value="class">Classes</option>
+              </select>
+            </label>
+          </div>
+          <div id="timeline" class="timeline"></div>
+        </section>
+        <div class="side">
+          <section class="panel" aria-labelledby="hotspots-title">
+            <div class="panel-heading">
+              <div>
+                <h2 id="hotspots-title">File hotspots</h2>
+              </div>
+            </div>
+            <div id="hotspots"></div>
+          </section>
+          <section class="panel" aria-labelledby="coupling-title">
+            <div class="panel-heading">
+              <div>
+                <h2 id="coupling-title">Change coupling</h2>
+              </div>
+            </div>
+            <div id="coupling"></div>
+          </section>
+        </div>
+      </div>
+      <section class="panel patterns" aria-labelledby="patterns-title">
+        <div class="panel-heading">
+          <div>
+            <h2 id="patterns-title">Repeated transformations</h2>
+          </div>
+        </div>
+        <div id="patterns"></div>
+      </section>
+      <details class="limits">
+        <summary>Report scope and limitations</summary>
+        <ul id="limits"></ul>
+      </details>
+      <footer>JSON reports open locally in your browser.</footer>
+    </main>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

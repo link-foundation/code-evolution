@@ -95,7 +95,10 @@ export default [
     },
   },
   {
-    files: ['examples/universal-app/src/**/*.js'],
+    files: [
+      'examples/universal-app/src/**/*.js',
+      'examples/universal-app/evolution/**/*.js',
+    ],
     languageOptions: {
       globals: {
         document: 'readonly',

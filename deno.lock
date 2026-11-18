@@ -13,6 +13,9 @@
     "npm:lint-staged@^16.4.0": "16.4.0",
     "npm:prettier@^3.6.2": "3.8.4",
     "npm:test-anywhere@~0.8.48": "0.8.50",
+    "npm:tree-sitter-wasms@0.1.13": "0.1.13",
+    "npm:web-tree-sitter@0.20.8": "0.20.8",
+    "npm:web-tree-sitter@0.24.7": "0.24.7",
     "npm:yaml@2.9.1": "2.9.1"
   },
   "npm": {
@@ -95,7 +98,7 @@
         "@changesets/should-skip-package",
         "@changesets/types",
         "@manypkg/get-packages",
-        "picomatch"
+        "picomatch@npm:@ryotsu/picomatch@4.0.7-a"
       ]
     },
     "@changesets/errors@1.0.0": {
@@ -121,7 +124,7 @@
         "@changesets/errors",
         "@changesets/types",
         "@manypkg/get-packages",
-        "picomatch",
+        "picomatch@npm:@ryotsu/picomatch@4.0.7-a",
         "tinyexec"
       ]
     },
@@ -367,6 +370,9 @@
         "@resvg/resvg-js-win32-ia32-msvc",
         "@resvg/resvg-js-win32-x64-msvc"
       ]
+    },
+    "@ryotsu/picomatch@4.0.7-a": {
+      "integrity": "sha512-JroBFEmaejC7szGSfqOhF1QZHLKvX2wTA1+fWyfkpy3BjzdQKNPLKa2FtgeKVUDy5/UPUNkXEeCHJ5ZRBMLTVA=="
     },
     "@sec-ant/readable-stream@0.4.1": {
       "integrity": "sha512-831qok9r2t8AlxLko40y2ebgSDhenenCatLVeW/uBtnHPyhHOvG0C7TvfgecV+wHzIm5KUICgzmVpWS+IMEAeg=="
@@ -653,13 +659,13 @@
         "fast-string-width"
       ]
     },
-    "fdir@6.5.0_picomatch@4.0.7": {
+    "fdir@6.5.0_@ryotsu+picomatch@4.0.7-a": {
       "integrity": "sha512-tIbYtZbucOs0BRGqPJkshJUYdL+SDH7dVM8gjy+ERp3WAUjLEFJE+02kanyHtwjWOnwrKYBiwAmM0p4kLJAnXg==",
       "dependencies": [
-        "picomatch"
+        "picomatch@npm:@ryotsu/picomatch@4.0.7-a"
       ],
       "optionalPeers": [
-        "picomatch"
+        "picomatch@npm:@ryotsu/picomatch@4.0.7-a"
       ]
     },
     "figures@6.1.0": {
@@ -888,7 +894,7 @@
       "dependencies": [
         "commander",
         "listr2",
-        "picomatch",
+        "picomatch@npm:@ryotsu/picomatch@4.0.7-a",
         "string-argv",
         "tinyexec",
         "yaml"
@@ -1000,9 +1006,6 @@
     },
     "picocolors@1.1.1": {
       "integrity": "sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA=="
-    },
-    "picomatch@4.0.7": {
-      "integrity": "sha512-qcJu88Q2IWqJsDD529JKMdwGm/dvInW4HvQnRwiH9JtihJvzGOscDtHE3x1pBKeUOTysQ8kVmLnJ2kJu7yhcGA=="
     },
     "prelude-ls@1.2.1": {
       "integrity": "sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g=="
@@ -1121,8 +1124,11 @@
       "integrity": "sha512-wXR/dYpcqKmfWpEdZjiKJOwCNFndD0DMnrW/cYjVGttEkBfVgcLFHoNrlj47mjOVic9yyNu65alsgF4NQyTa2g==",
       "dependencies": [
         "fdir",
-        "picomatch"
+        "picomatch@npm:@ryotsu/picomatch@4.0.7-a"
       ]
+    },
+    "tree-sitter-wasms@0.1.13": {
+      "integrity": "sha512-wT+cR6DwaIz80/vho3AvSF0N4txuNx/5bcRKoXouOfClpxh/qqrF4URNLQXbbt8MaAxeksZcZd1j8gcGjc+QxQ=="
     },
     "type-check@0.4.0": {
       "integrity": "sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==",
@@ -1138,6 +1144,12 @@
       "dependencies": [
         "punycode"
       ]
+    },
+    "web-tree-sitter@0.20.8": {
+      "integrity": "sha512-weOVgZ3aAARgdnb220GqYuh7+rZU0Ka9k9yfKtGAzEYMa6GgiCzW9JjQRJyCJakvibQW+dfjJdihjInKuuCAUQ=="
+    },
+    "web-tree-sitter@0.24.7": {
+      "integrity": "sha512-CdC/TqVFbXqR+C51v38hv6wOPatKEUGxa39scAeFSm98wIhZxAYonhRQPSMmfZ2w7JDI0zQDdzdmgtNk06/krQ=="
     },
     "which-command@0.1.0": {
       "integrity": "sha512-XZyoF5/5hZtXitIwzrU4NKK+Wtbb9aB9CezUEw2Q0wlYK8NUYQxC1rRXgNueYLtBAJwXIb+/tFVk4dozciNJMA==",
@@ -1204,11 +1216,15 @@
         "npm:lint-staged@^16.4.0",
         "npm:prettier@^3.6.2",
         "npm:test-anywhere@~0.8.48",
+        "npm:tree-sitter-wasms@0.1.13",
+        "npm:web-tree-sitter@0.20.8",
+        "npm:web-tree-sitter@0.24.7",
         "npm:yaml@2.9.1"
       ],
       "overrides": {
         "minimatch@>=7 <11": "^11.0.4",
-        "glob@>=9 <=14.0.1": "^14.0.2"
+        "glob@>=9 <=14.0.1": "^14.0.2",
+        "picomatch": "npm:@ryotsu/picomatch@4.0.7-a"
       }
     }
   }

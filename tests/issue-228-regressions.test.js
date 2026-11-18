@@ -73,10 +73,12 @@ describe('Deno lock and npm install script policies', () => {
       ...pkg.dependencies,
       ...pkg.devDependencies,
     })
-      .map(
-        ([name, range]) =>
-          `npm:${name}@${range.replace(/^\^(0\.[1-9]\d*\.\d+)/, '~$1')}`
-      )
+      .map(([name, range]) => {
+        if (range.startsWith('npm:')) {
+          return range;
+        }
+        return `npm:${name}@${range.replace(/^\^(0\.[1-9]\d*\.\d+)/, '~$1')}`;
+      })
       .sort();
     expect([...lock.workspace.packageJson.dependencies].sort()).toEqual(
       expected

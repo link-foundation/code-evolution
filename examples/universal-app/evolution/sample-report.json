@@ -1,0 +1,1077 @@
+{
+  "schemaVersion": 1,
+  "algorithm": "first-parent-structural-v1",
+  "from": "57583c74ae4ff44af9c298079fbaeece1bae59e6",
+  "to": "f5cbf88018970626328fd80ba03eced9047a996f",
+  "truncated": false,
+  "commits": [
+    {
+      "sha": "57583c74ae4ff44af9c298079fbaeece1bae59e6",
+      "date": "2026-06-02T12:00:00.000Z",
+      "subject": "Introduce text formatting and metrics"
+    },
+    {
+      "sha": "3cbc8894b04fb1b5405b5e3113c1f276a95fb2b3",
+      "date": "2026-06-05T12:00:00.000Z",
+      "subject": "Simplify repeated default-value branches"
+    },
+    {
+      "sha": "3ef49e932e9c93a8fec52b4519802112685b919e",
+      "date": "2026-06-08T12:00:00.000Z",
+      "subject": "Add a slug and trim formatted output"
+    },
+    {
+      "sha": "da1be2417d7c3dcd5bac5e065ee92ecee158d60d",
+      "date": "2026-06-12T12:00:00.000Z",
+      "subject": "Move the formatter to a dedicated file"
+    },
+    {
+      "sha": "f5cbf88018970626328fd80ba03eced9047a996f",
+      "date": "2026-06-17T12:00:00.000Z",
+      "subject": "Remove the unused cache and count unique values"
+    }
+  ],
+  "events": [
+    {
+      "commit": "57583c74ae4ff44af9c298079fbaeece1bae59e6",
+      "id": "64b8cb400722e86866233227fd7caed00096eebe50677ef738165016e26931ad",
+      "kind": "file",
+      "action": "added",
+      "after": {
+        "path": "src/cache.js",
+        "kind": "file",
+        "name": "src/cache.js",
+        "qualifiedName": "src/cache.js",
+        "hash": "71be0b7cbe802894b44c8ab946ba7fd7499028c2",
+        "shape": "a56ffeac7bec40690d10ef61edd5e45ad7ed7dc6cba75525e036d2689d8073fc",
+        "language": "javascript",
+        "startLine": 1,
+        "complexity": 1,
+        "id": "64b8cb400722e86866233227fd7caed00096eebe50677ef738165016e26931ad"
+      }
+    },
+    {
+      "commit": "57583c74ae4ff44af9c298079fbaeece1bae59e6",
+      "id": "3b05e8b32029b75b73c1e5f0f0a90373b4d42ea473219ab228ddbb9d11405bc2",
+      "kind": "function",
+      "action": "added",
+      "after": {
+        "kind": "function",
+        "syntaxKind": "function_declaration",
+        "name": "cached",
+        "qualifiedName": "cached",
+        "start": 7,
+        "end": 47,
+        "startLine": 1,
+        "endLine": 1,
+        "hash": "f5ffba3a64ad97eb13865c33080a529ebe1d4fc08a60d9e7198e8f42709cc3a9",
+        "parameters": 1,
+        "complexity": 1,
+        "shape": "7e3ebe2644d49e4264c514bd660a6a43caebff8cde1a0a418ccdf99b1d60d8d4",
+        "editHash": "7e3ebe2644d49e4264c514bd660a6a43caebff8cde1a0a418ccdf99b1d60d8d4",
+        "path": "src/cache.js",
+        "language": "javascript",
+        "id": "3b05e8b32029b75b73c1e5f0f0a90373b4d42ea473219ab228ddbb9d11405bc2"
+      }
+    },
+    {
+      "commit": "57583c74ae4ff44af9c298079fbaeece1bae59e6",
+      "id": "2e9673475d2473eeddd7f12ab30e140ee443ce5c5b02bfcfa771042a2dd82959",
+      "kind": "file",
+      "action": "added",
+      "after": {
+        "path": "src/format.js",
+        "kind": "file",
+        "name": "src/format.js",
+        "qualifiedName": "src/format.js",
+        "hash": "661d795c809f31b55de6a30d5f805a0dac0c4cbb",
+        "shape": "3ea017c62a718b4203745afe275dba9dcac7af115a0b975816bd5362f0cfd66b",
+        "language": "javascript",
+        "startLine": 1,
+        "complexity": 2,
+        "id": "2e9673475d2473eeddd7f12ab30e140ee443ce5c5b02bfcfa771042a2dd82959"
+      }
+    },
+    {
+      "commit": "57583c74ae4ff44af9c298079fbaeece1bae59e6",
+      "id": "0858bc9404191cc57b613bb0b8aec44afb58e32d3c7325f9cb0fb49c2d0a5a83",
+      "kind": "class",
+      "action": "added",
+      "after": {
+        "kind": "class",
+        "syntaxKind": "class_declaration",
+        "name": "Formatter",
+        "qualifiedName": "Formatter",
+        "start": 7,
+        "end": 66,
+        "startLine": 1,
+        "endLine": 1,
+        "hash": "e833ee1cc71c9fe52dddbd8916d0d4ed6ba11f8da2d3a7d25b976ef2aebd105f",
+        "parameters": 0,
+        "complexity": 1,
+        "shape": "80f71a9a2594fb9d880ac6ca1d1a2e4137040c3515f2cd0385b2268562e6ef62",
+        "editHash": "80f71a9a2594fb9d880ac6ca1d1a2e4137040c3515f2cd0385b2268562e6ef62",
+        "path": "src/format.js",
+        "language": "javascript",
+        "id": "0858bc9404191cc57b613bb0b8aec44afb58e32d3c7325f9cb0fb49c2d0a5a83"
+      }
+    },
+    {
+      "commit": "57583c74ae4ff44af9c298079fbaeece1bae59e6",
+      "id": "6552ed8ea0a89c5143d0aa9f18c1892fcf48daa405f456ff761880696a6f0366",
+      "kind": "function",
+      "action": "added",
+      "after": {
+        "kind": "function",
+        "syntaxKind": "method_definition",
+        "name": "format",
+        "qualifiedName": "Formatter.format",
+        "start": 25,
+        "end": 64,
+        "startLine": 1,
+        "endLine": 1,
+        "hash": "fddd2cdcd8a9b038ddddef4a6d8f85cd2fdde848431db66c5b0bdd992b7b1d28",
+        "parameters": 1,
+        "complexity": 1,
+        "shape": "fbc6fb5ad998926f3793c9f5a733f6d13eba5b9776036a7bf70d7a4186b4d871",
+        "editHash": "fbc6fb5ad998926f3793c9f5a733f6d13eba5b9776036a7bf70d7a4186b4d871",
+        "path": "src/format.js",
+        "language": "javascript",
+        "id": "6552ed8ea0a89c5143d0aa9f18c1892fcf48daa405f456ff761880696a6f0366"
+      }
+    },
+    {
+      "commit": "57583c74ae4ff44af9c298079fbaeece1bae59e6",
+      "id": "2854958d762638eac243cf2445b6797b409320cf5af34a7c50a4048d781787e4",
+      "kind": "file",
+      "action": "added",
+      "after": {
+        "path": "src/metrics.py",
+        "kind": "file",
+        "name": "src/metrics.py",
+        "qualifiedName": "src/metrics.py",
+        "hash": "b658981e8ffdba26593bbfd5485fa27923f57cd8",
+        "shape": "5f84cd31f03d2ae858a29d914ef62cc9df33f3cecd29110a60bafa9c14bf60f0",
+        "language": "python",
+        "startLine": 1,
+        "complexity": 1,
+        "id": "2854958d762638eac243cf2445b6797b409320cf5af34a7c50a4048d781787e4"
+      }
+    },
+    {
+      "commit": "57583c74ae4ff44af9c298079fbaeece1bae59e6",
+      "id": "7047446222010452739430d8642900b0c126dcfb2ab481d44863ddc7bcb5906d",
+      "kind": "function",
+      "action": "added",
+      "after": {
+        "kind": "function",
+        "syntaxKind": "function_definition",
+        "name": "count",
+        "qualifiedName": "count",
+        "start": 0,
+        "end": 41,
+        "startLine": 1,
+        "endLine": 2,
+        "hash": "5e0709f85ae6dff3294bae821f1b72d42e5d9529357ce6a0fc32c637633399fa",
+        "parameters": 1,
+        "complexity": 1,
+        "shape": "c729a58f667a9a2d6f88c8316899f331839015d7c5b1fa5ef83e2c2e8b21b578",
+        "editHash": "c729a58f667a9a2d6f88c8316899f331839015d7c5b1fa5ef83e2c2e8b21b578",
+        "path": "src/metrics.py",
+        "language": "python",
+        "id": "7047446222010452739430d8642900b0c126dcfb2ab481d44863ddc7bcb5906d"
+      }
+    },
+    {
+      "commit": "57583c74ae4ff44af9c298079fbaeece1bae59e6",
+      "id": "4611d04926ab7eebb45d61deb7731ca9c6813065817cd49792cba6d2dd26d4fa",
+      "kind": "file",
+      "action": "added",
+      "after": {
+        "path": "src/normalize.js",
+        "kind": "file",
+        "name": "src/normalize.js",
+        "qualifiedName": "src/normalize.js",
+        "hash": "c2beed8bbc77315944e6764bef2293a6e67de344",
+        "shape": "71b8f62b0de7bfe183b458b6dd13f034d099fa4db6ab77a5b06abcdfe2eb9629",
+        "language": "javascript",
+        "startLine": 1,
+        "complexity": 4,
+        "id": "4611d04926ab7eebb45d61deb7731ca9c6813065817cd49792cba6d2dd26d4fa"
+      }
+    },
+    {
+      "commit": "57583c74ae4ff44af9c298079fbaeece1bae59e6",
+      "id": "674e7544bd8749bb3f72d25ceb2cbd10744d00938afe10082d5a8dcef633a563",
+      "kind": "function",
+      "action": "added",
+      "after": {
+        "kind": "function",
+        "syntaxKind": "function_declaration",
+        "name": "label",
+        "qualifiedName": "label",
+        "start": 7,
+        "end": 76,
+        "startLine": 1,
+        "endLine": 1,
+        "hash": "4864a64d2653c9b4f7eab7f157be2e95a5059d84e11b40901f4768857433d755",
+        "parameters": 1,
+        "complexity": 2,
+        "shape": "9d59733e176ce5ef66bb428d714142a00f4fc487a87165b78cda37c39d28f08e",
+        "editHash": "a2824929d6bcaf03e70c541e0f18e2dad965eac5a649a2479fea9f70c046b3b4",
+        "path": "src/normalize.js",
+        "language": "javascript",
+        "id": "674e7544bd8749bb3f72d25ceb2cbd10744d00938afe10082d5a8dcef633a563"
+      }
+    },
+    {
+      "commit": "57583c74ae4ff44af9c298079fbaeece1bae59e6",
+      "id": "810d4134c3ed6bd5452285186ecaba7c8ba0e5f3a9630e819ca5236608c28238",
+      "kind": "function",
+      "action": "added",
+      "after": {
+        "kind": "function",
+        "syntaxKind": "function_declaration",
+        "name": "title",
+        "qualifiedName": "title",
+        "start": 84,
+        "end": 150,
+        "startLine": 2,
+        "endLine": 2,
+        "hash": "1e882961b76a6367981b5d3f3b3a38ee928cdc6a1d874f1f3e0f0094fedfcc41",
+        "parameters": 1,
+        "complexity": 2,
+        "shape": "9d59733e176ce5ef66bb428d714142a00f4fc487a87165b78cda37c39d28f08e",
+        "editHash": "a2824929d6bcaf03e70c541e0f18e2dad965eac5a649a2479fea9f70c046b3b4",
+        "path": "src/normalize.js",
+        "language": "javascript",
+        "id": "810d4134c3ed6bd5452285186ecaba7c8ba0e5f3a9630e819ca5236608c28238"
+      }
+    },
+    {
+      "commit": "3cbc8894b04fb1b5405b5e3113c1f276a95fb2b3",
+      "id": "2854958d762638eac243cf2445b6797b409320cf5af34a7c50a4048d781787e4",
+      "kind": "file",
+      "action": "modified",
+      "matchedBy": "qualified-name",
+      "before": {
+        "path": "src/metrics.py",
+        "kind": "file",
+        "name": "src/metrics.py",
+        "qualifiedName": "src/metrics.py",
+        "hash": "b658981e8ffdba26593bbfd5485fa27923f57cd8",
+        "shape": "5f84cd31f03d2ae858a29d914ef62cc9df33f3cecd29110a60bafa9c14bf60f0",
+        "language": "python",
+        "startLine": 1,
+        "complexity": 1,
+        "id": "2854958d762638eac243cf2445b6797b409320cf5af34a7c50a4048d781787e4"
+      },
+      "after": {
+        "path": "src/metrics.py",
+        "kind": "file",
+        "name": "src/metrics.py",
+        "qualifiedName": "src/metrics.py",
+        "hash": "b4f062cae06f19f0e8a53d654e0fb0a942bc47a2",
+        "shape": "40a702ca77ccbab57deebb21116d177e9172835ef3a74b44a075f7fc8ddae95f",
+        "language": "python",
+        "startLine": 1,
+        "complexity": 1,
+        "id": "2854958d762638eac243cf2445b6797b409320cf5af34a7c50a4048d781787e4"
+      }
+    },
+    {
+      "commit": "3cbc8894b04fb1b5405b5e3113c1f276a95fb2b3",
+      "id": "7047446222010452739430d8642900b0c126dcfb2ab481d44863ddc7bcb5906d",
+      "kind": "function",
+      "action": "modified",
+      "matchedBy": "qualified-name",
+      "before": {
+        "kind": "function",
+        "syntaxKind": "function_definition",
+        "name": "count",
+        "qualifiedName": "count",
+        "start": 0,
+        "end": 41,
+        "startLine": 1,
+        "endLine": 2,
+        "hash": "5e0709f85ae6dff3294bae821f1b72d42e5d9529357ce6a0fc32c637633399fa",
+        "parameters": 1,
+        "complexity": 1,
+        "shape": "c729a58f667a9a2d6f88c8316899f331839015d7c5b1fa5ef83e2c2e8b21b578",
+        "editHash": "c729a58f667a9a2d6f88c8316899f331839015d7c5b1fa5ef83e2c2e8b21b578",
+        "path": "src/metrics.py",
+        "language": "python",
+        "id": "7047446222010452739430d8642900b0c126dcfb2ab481d44863ddc7bcb5906d"
+      },
+      "after": {
+        "kind": "function",
+        "syntaxKind": "function_definition",
+        "name": "count",
+        "qualifiedName": "count",
+        "start": 0,
+        "end": 56,
+        "startLine": 1,
+        "endLine": 2,
+        "hash": "b6a59f7167c3a1a4e8e59d7130bc4a4470371d38d2eca1b5ebf04e930583e570",
+        "parameters": 1,
+        "complexity": 1,
+        "shape": "51b00abdde6a212eb7e42daf538c6b815021f6603a3322a58b0d06c223c8c5eb",
+        "editHash": "b377a8793fffdc8c48b978742c9601b2cecb7ec189809fd10b7e73edb4594c36",
+        "path": "src/metrics.py",
+        "language": "python",
+        "id": "7047446222010452739430d8642900b0c126dcfb2ab481d44863ddc7bcb5906d"
+      }
+    },
+    {
+      "commit": "3cbc8894b04fb1b5405b5e3113c1f276a95fb2b3",
+      "id": "4611d04926ab7eebb45d61deb7731ca9c6813065817cd49792cba6d2dd26d4fa",
+      "kind": "file",
+      "action": "modified",
+      "matchedBy": "qualified-name",
+      "before": {
+        "path": "src/normalize.js",
+        "kind": "file",
+        "name": "src/normalize.js",
+        "qualifiedName": "src/normalize.js",
+        "hash": "c2beed8bbc77315944e6764bef2293a6e67de344",
+        "shape": "71b8f62b0de7bfe183b458b6dd13f034d099fa4db6ab77a5b06abcdfe2eb9629",
+        "language": "javascript",
+        "startLine": 1,
+        "complexity": 4,
+        "id": "4611d04926ab7eebb45d61deb7731ca9c6813065817cd49792cba6d2dd26d4fa"
+      },
+      "after": {
+        "path": "src/normalize.js",
+        "kind": "file",
+        "name": "src/normalize.js",
+        "qualifiedName": "src/normalize.js",
+        "hash": "f2cfbf52ab2198073a4102354476c3d08b251ad3",
+        "shape": "6708e3fef21bf308a576f413b3c3eb420ecb6710e298d1eddccd94f1ccc0d7cb",
+        "language": "javascript",
+        "startLine": 1,
+        "complexity": 4,
+        "id": "4611d04926ab7eebb45d61deb7731ca9c6813065817cd49792cba6d2dd26d4fa"
+      }
+    },
+    {
+      "commit": "3cbc8894b04fb1b5405b5e3113c1f276a95fb2b3",
+      "id": "674e7544bd8749bb3f72d25ceb2cbd10744d00938afe10082d5a8dcef633a563",
+      "kind": "function",
+      "action": "modified",
+      "matchedBy": "qualified-name",
+      "before": {
+        "kind": "function",
+        "syntaxKind": "function_declaration",
+        "name": "label",
+        "qualifiedName": "label",
+        "start": 7,
+        "end": 76,
+        "startLine": 1,
+        "endLine": 1,
+        "hash": "4864a64d2653c9b4f7eab7f157be2e95a5059d84e11b40901f4768857433d755",
+        "parameters": 1,
+        "complexity": 2,
+        "shape": "9d59733e176ce5ef66bb428d714142a00f4fc487a87165b78cda37c39d28f08e",
+        "editHash": "a2824929d6bcaf03e70c541e0f18e2dad965eac5a649a2479fea9f70c046b3b4",
+        "path": "src/normalize.js",
+        "language": "javascript",
+        "id": "674e7544bd8749bb3f72d25ceb2cbd10744d00938afe10082d5a8dcef633a563"
+      },
+      "after": {
+        "kind": "function",
+        "syntaxKind": "function_declaration",
+        "name": "label",
+        "qualifiedName": "label",
+        "start": 7,
+        "end": 56,
+        "startLine": 1,
+        "endLine": 1,
+        "hash": "fd4d8d802396881bafa37c362643bf59c24aa78ee85e256eda2e6d203a66d5cb",
+        "parameters": 1,
+        "complexity": 2,
+        "shape": "3c1ac328efa60bfe76d8af60967aff2e512c2a8bc72bab37fb62fef57ffce84c",
+        "editHash": "86c40b5842642ceb6c73d85c2da75aab5399c3356eb82b70bc2e39f30a2f0b7a",
+        "path": "src/normalize.js",
+        "language": "javascript",
+        "id": "674e7544bd8749bb3f72d25ceb2cbd10744d00938afe10082d5a8dcef633a563"
+      }
+    },
+    {
+      "commit": "3cbc8894b04fb1b5405b5e3113c1f276a95fb2b3",
+      "id": "810d4134c3ed6bd5452285186ecaba7c8ba0e5f3a9630e819ca5236608c28238",
+      "kind": "function",
+      "action": "modified",
+      "matchedBy": "qualified-name",
+      "before": {
+        "kind": "function",
+        "syntaxKind": "function_declaration",
+        "name": "title",
+        "qualifiedName": "title",
+        "start": 84,
+        "end": 150,
+        "startLine": 2,
+        "endLine": 2,
+        "hash": "1e882961b76a6367981b5d3f3b3a38ee928cdc6a1d874f1f3e0f0094fedfcc41",
+        "parameters": 1,
+        "complexity": 2,
+        "shape": "9d59733e176ce5ef66bb428d714142a00f4fc487a87165b78cda37c39d28f08e",
+        "editHash": "a2824929d6bcaf03e70c541e0f18e2dad965eac5a649a2479fea9f70c046b3b4",
+        "path": "src/normalize.js",
+        "language": "javascript",
+        "id": "810d4134c3ed6bd5452285186ecaba7c8ba0e5f3a9630e819ca5236608c28238"
+      },
+      "after": {
+        "kind": "function",
+        "syntaxKind": "function_declaration",
+        "name": "title",
+        "qualifiedName": "title",
+        "start": 64,
+        "end": 111,
+        "startLine": 2,
+        "endLine": 2,
+        "hash": "983c05af7c1561a405245a4ae8cbb5a46acefbd257b9acca5fdce08b3d44dfee",
+        "parameters": 1,
+        "complexity": 2,
+        "shape": "3c1ac328efa60bfe76d8af60967aff2e512c2a8bc72bab37fb62fef57ffce84c",
+        "editHash": "86c40b5842642ceb6c73d85c2da75aab5399c3356eb82b70bc2e39f30a2f0b7a",
+        "path": "src/normalize.js",
+        "language": "javascript",
+        "id": "810d4134c3ed6bd5452285186ecaba7c8ba0e5f3a9630e819ca5236608c28238"
+      }
+    },
+    {
+      "commit": "3ef49e932e9c93a8fec52b4519802112685b919e",
+      "id": "2e9673475d2473eeddd7f12ab30e140ee443ce5c5b02bfcfa771042a2dd82959",
+      "kind": "file",
+      "action": "modified",
+      "matchedBy": "qualified-name",
+      "before": {
+        "path": "src/format.js",
+        "kind": "file",
+        "name": "src/format.js",
+        "qualifiedName": "src/format.js",
+        "hash": "661d795c809f31b55de6a30d5f805a0dac0c4cbb",
+        "shape": "3ea017c62a718b4203745afe275dba9dcac7af115a0b975816bd5362f0cfd66b",
+        "language": "javascript",
+        "startLine": 1,
+        "complexity": 2,
+        "id": "2e9673475d2473eeddd7f12ab30e140ee443ce5c5b02bfcfa771042a2dd82959"
+      },
+      "after": {
+        "path": "src/format.js",
+        "kind": "file",
+        "name": "src/format.js",
+        "qualifiedName": "src/format.js",
+        "hash": "709a463fd016f5041655a6b36f0d8c3b6c6b22e8",
+        "shape": "b61a85823dfe8e2cdd0a8ff771768cfc0922a6c55efdf9580e5d597850e47cca",
+        "language": "javascript",
+        "startLine": 1,
+        "complexity": 2,
+        "id": "2e9673475d2473eeddd7f12ab30e140ee443ce5c5b02bfcfa771042a2dd82959"
+      }
+    },
+    {
+      "commit": "3ef49e932e9c93a8fec52b4519802112685b919e",
+      "id": "0858bc9404191cc57b613bb0b8aec44afb58e32d3c7325f9cb0fb49c2d0a5a83",
+      "kind": "class",
+      "action": "modified",
+      "matchedBy": "qualified-name",
+      "before": {
+        "kind": "class",
+        "syntaxKind": "class_declaration",
+        "name": "Formatter",
+        "qualifiedName": "Formatter",
+        "start": 7,
+        "end": 66,
+        "startLine": 1,
+        "endLine": 1,
+        "hash": "e833ee1cc71c9fe52dddbd8916d0d4ed6ba11f8da2d3a7d25b976ef2aebd105f",
+        "parameters": 0,
+        "complexity": 1,
+        "shape": "80f71a9a2594fb9d880ac6ca1d1a2e4137040c3515f2cd0385b2268562e6ef62",
+        "editHash": "80f71a9a2594fb9d880ac6ca1d1a2e4137040c3515f2cd0385b2268562e6ef62",
+        "path": "src/format.js",
+        "language": "javascript",
+        "id": "0858bc9404191cc57b613bb0b8aec44afb58e32d3c7325f9cb0fb49c2d0a5a83"
+      },
+      "after": {
+        "kind": "class",
+        "syntaxKind": "class_declaration",
+        "name": "Formatter",
+        "qualifiedName": "Formatter",
+        "start": 7,
+        "end": 73,
+        "startLine": 1,
+        "endLine": 1,
+        "hash": "18441f134c87788d5cbe27c3f2c8bd9889500596c06c1963590680f1e7eb13bc",
+        "parameters": 0,
+        "complexity": 1,
+        "shape": "c9b6fec5e6096a433f69b87526660b7291e9cbcee02307b8faaf6cd81e4ecbad",
+        "editHash": "c9b6fec5e6096a433f69b87526660b7291e9cbcee02307b8faaf6cd81e4ecbad",
+        "path": "src/format.js",
+        "language": "javascript",
+        "id": "0858bc9404191cc57b613bb0b8aec44afb58e32d3c7325f9cb0fb49c2d0a5a83"
+      }
+    },
+    {
+      "commit": "3ef49e932e9c93a8fec52b4519802112685b919e",
+      "id": "6552ed8ea0a89c5143d0aa9f18c1892fcf48daa405f456ff761880696a6f0366",
+      "kind": "function",
+      "action": "modified",
+      "matchedBy": "qualified-name",
+      "before": {
+        "kind": "function",
+        "syntaxKind": "method_definition",
+        "name": "format",
+        "qualifiedName": "Formatter.format",
+        "start": 25,
+        "end": 64,
+        "startLine": 1,
+        "endLine": 1,
+        "hash": "fddd2cdcd8a9b038ddddef4a6d8f85cd2fdde848431db66c5b0bdd992b7b1d28",
+        "parameters": 1,
+        "complexity": 1,
+        "shape": "fbc6fb5ad998926f3793c9f5a733f6d13eba5b9776036a7bf70d7a4186b4d871",
+        "editHash": "fbc6fb5ad998926f3793c9f5a733f6d13eba5b9776036a7bf70d7a4186b4d871",
+        "path": "src/format.js",
+        "language": "javascript",
+        "id": "6552ed8ea0a89c5143d0aa9f18c1892fcf48daa405f456ff761880696a6f0366"
+      },
+      "after": {
+        "kind": "function",
+        "syntaxKind": "method_definition",
+        "name": "format",
+        "qualifiedName": "Formatter.format",
+        "start": 25,
+        "end": 71,
+        "startLine": 1,
+        "endLine": 1,
+        "hash": "b4719355a82cd13eb401d9935b1396c917b24488828af31a121d699fbb0d513b",
+        "parameters": 1,
+        "complexity": 1,
+        "shape": "919686762fa61443a35c5d86ae3f7cf264fc6f5367dab1e5670ba8c0bb9a0277",
+        "editHash": "919686762fa61443a35c5d86ae3f7cf264fc6f5367dab1e5670ba8c0bb9a0277",
+        "path": "src/format.js",
+        "language": "javascript",
+        "id": "6552ed8ea0a89c5143d0aa9f18c1892fcf48daa405f456ff761880696a6f0366"
+      }
+    },
+    {
+      "commit": "3ef49e932e9c93a8fec52b4519802112685b919e",
+      "id": "4611d04926ab7eebb45d61deb7731ca9c6813065817cd49792cba6d2dd26d4fa",
+      "kind": "file",
+      "action": "modified",
+      "matchedBy": "qualified-name",
+      "before": {
+        "path": "src/normalize.js",
+        "kind": "file",
+        "name": "src/normalize.js",
+        "qualifiedName": "src/normalize.js",
+        "hash": "f2cfbf52ab2198073a4102354476c3d08b251ad3",
+        "shape": "6708e3fef21bf308a576f413b3c3eb420ecb6710e298d1eddccd94f1ccc0d7cb",
+        "language": "javascript",
+        "startLine": 1,
+        "complexity": 4,
+        "id": "4611d04926ab7eebb45d61deb7731ca9c6813065817cd49792cba6d2dd26d4fa"
+      },
+      "after": {
+        "path": "src/normalize.js",
+        "kind": "file",
+        "name": "src/normalize.js",
+        "qualifiedName": "src/normalize.js",
+        "hash": "04581b87aaf5e3ec3007443aeb91f1602f1ff16c",
+        "shape": "06c5a9094cc294c55da10f4879be5da04a87128427828059e57ff2c2188c6716",
+        "language": "javascript",
+        "startLine": 1,
+        "complexity": 5,
+        "id": "4611d04926ab7eebb45d61deb7731ca9c6813065817cd49792cba6d2dd26d4fa"
+      }
+    },
+    {
+      "commit": "3ef49e932e9c93a8fec52b4519802112685b919e",
+      "id": "44fc61efb8c83a8eb128decdf43fbd431dfcb1a46b7dea9958d6ac1880f620c1",
+      "kind": "function",
+      "action": "added",
+      "after": {
+        "kind": "function",
+        "syntaxKind": "function_declaration",
+        "name": "slug",
+        "qualifiedName": "slug",
+        "start": 119,
+        "end": 171,
+        "startLine": 3,
+        "endLine": 3,
+        "hash": "25942520158e35de7f2482624d1113f624b49f909b5ef7c4ae1e8915efb5ccbf",
+        "parameters": 1,
+        "complexity": 1,
+        "shape": "f49c9c25d61049b2572de08af2c3aed8c7dacc1b57deb4b878a03f1423f90153",
+        "editHash": "f49c9c25d61049b2572de08af2c3aed8c7dacc1b57deb4b878a03f1423f90153",
+        "path": "src/normalize.js",
+        "language": "javascript",
+        "id": "44fc61efb8c83a8eb128decdf43fbd431dfcb1a46b7dea9958d6ac1880f620c1"
+      }
+    },
+    {
+      "commit": "da1be2417d7c3dcd5bac5e065ee92ecee158d60d",
+      "id": "2e9673475d2473eeddd7f12ab30e140ee443ce5c5b02bfcfa771042a2dd82959",
+      "kind": "file",
+      "action": "renamed",
+      "matchedBy": "exact-content",
+      "before": {
+        "path": "src/format.js",
+        "kind": "file",
+        "name": "src/format.js",
+        "qualifiedName": "src/format.js",
+        "hash": "709a463fd016f5041655a6b36f0d8c3b6c6b22e8",
+        "shape": "b61a85823dfe8e2cdd0a8ff771768cfc0922a6c55efdf9580e5d597850e47cca",
+        "language": "javascript",
+        "startLine": 1,
+        "complexity": 2,
+        "id": "2e9673475d2473eeddd7f12ab30e140ee443ce5c5b02bfcfa771042a2dd82959"
+      },
+      "after": {
+        "path": "src/formatter.js",
+        "kind": "file",
+        "name": "src/formatter.js",
+        "qualifiedName": "src/formatter.js",
+        "hash": "709a463fd016f5041655a6b36f0d8c3b6c6b22e8",
+        "shape": "b61a85823dfe8e2cdd0a8ff771768cfc0922a6c55efdf9580e5d597850e47cca",
+        "language": "javascript",
+        "startLine": 1,
+        "complexity": 2,
+        "id": "2e9673475d2473eeddd7f12ab30e140ee443ce5c5b02bfcfa771042a2dd82959"
+      }
+    },
+    {
+      "commit": "da1be2417d7c3dcd5bac5e065ee92ecee158d60d",
+      "id": "0858bc9404191cc57b613bb0b8aec44afb58e32d3c7325f9cb0fb49c2d0a5a83",
+      "kind": "class",
+      "action": "renamed",
+      "matchedBy": "exact-content",
+      "before": {
+        "kind": "class",
+        "syntaxKind": "class_declaration",
+        "name": "Formatter",
+        "qualifiedName": "Formatter",
+        "start": 7,
+        "end": 73,
+        "startLine": 1,
+        "endLine": 1,
+        "hash": "18441f134c87788d5cbe27c3f2c8bd9889500596c06c1963590680f1e7eb13bc",
+        "parameters": 0,
+        "complexity": 1,
+        "shape": "c9b6fec5e6096a433f69b87526660b7291e9cbcee02307b8faaf6cd81e4ecbad",
+        "editHash": "c9b6fec5e6096a433f69b87526660b7291e9cbcee02307b8faaf6cd81e4ecbad",
+        "path": "src/format.js",
+        "language": "javascript",
+        "id": "0858bc9404191cc57b613bb0b8aec44afb58e32d3c7325f9cb0fb49c2d0a5a83"
+      },
+      "after": {
+        "kind": "class",
+        "syntaxKind": "class_declaration",
+        "name": "Formatter",
+        "qualifiedName": "Formatter",
+        "start": 7,
+        "end": 73,
+        "startLine": 1,
+        "endLine": 1,
+        "hash": "18441f134c87788d5cbe27c3f2c8bd9889500596c06c1963590680f1e7eb13bc",
+        "parameters": 0,
+        "complexity": 1,
+        "shape": "c9b6fec5e6096a433f69b87526660b7291e9cbcee02307b8faaf6cd81e4ecbad",
+        "editHash": "c9b6fec5e6096a433f69b87526660b7291e9cbcee02307b8faaf6cd81e4ecbad",
+        "path": "src/formatter.js",
+        "language": "javascript",
+        "id": "0858bc9404191cc57b613bb0b8aec44afb58e32d3c7325f9cb0fb49c2d0a5a83"
+      }
+    },
+    {
+      "commit": "da1be2417d7c3dcd5bac5e065ee92ecee158d60d",
+      "id": "6552ed8ea0a89c5143d0aa9f18c1892fcf48daa405f456ff761880696a6f0366",
+      "kind": "function",
+      "action": "renamed",
+      "matchedBy": "exact-content",
+      "before": {
+        "kind": "function",
+        "syntaxKind": "method_definition",
+        "name": "format",
+        "qualifiedName": "Formatter.format",
+        "start": 25,
+        "end": 71,
+        "startLine": 1,
+        "endLine": 1,
+        "hash": "b4719355a82cd13eb401d9935b1396c917b24488828af31a121d699fbb0d513b",
+        "parameters": 1,
+        "complexity": 1,
+        "shape": "919686762fa61443a35c5d86ae3f7cf264fc6f5367dab1e5670ba8c0bb9a0277",
+        "editHash": "919686762fa61443a35c5d86ae3f7cf264fc6f5367dab1e5670ba8c0bb9a0277",
+        "path": "src/format.js",
+        "language": "javascript",
+        "id": "6552ed8ea0a89c5143d0aa9f18c1892fcf48daa405f456ff761880696a6f0366"
+      },
+      "after": {
+        "kind": "function",
+        "syntaxKind": "method_definition",
+        "name": "format",
+        "qualifiedName": "Formatter.format",
+        "start": 25,
+        "end": 71,
+        "startLine": 1,
+        "endLine": 1,
+        "hash": "b4719355a82cd13eb401d9935b1396c917b24488828af31a121d699fbb0d513b",
+        "parameters": 1,
+        "complexity": 1,
+        "shape": "919686762fa61443a35c5d86ae3f7cf264fc6f5367dab1e5670ba8c0bb9a0277",
+        "editHash": "919686762fa61443a35c5d86ae3f7cf264fc6f5367dab1e5670ba8c0bb9a0277",
+        "path": "src/formatter.js",
+        "language": "javascript",
+        "id": "6552ed8ea0a89c5143d0aa9f18c1892fcf48daa405f456ff761880696a6f0366"
+      }
+    },
+    {
+      "commit": "f5cbf88018970626328fd80ba03eced9047a996f",
+      "id": "2854958d762638eac243cf2445b6797b409320cf5af34a7c50a4048d781787e4",
+      "kind": "file",
+      "action": "modified",
+      "matchedBy": "qualified-name",
+      "before": {
+        "path": "src/metrics.py",
+        "kind": "file",
+        "name": "src/metrics.py",
+        "qualifiedName": "src/metrics.py",
+        "hash": "b4f062cae06f19f0e8a53d654e0fb0a942bc47a2",
+        "shape": "40a702ca77ccbab57deebb21116d177e9172835ef3a74b44a075f7fc8ddae95f",
+        "language": "python",
+        "startLine": 1,
+        "complexity": 1,
+        "id": "2854958d762638eac243cf2445b6797b409320cf5af34a7c50a4048d781787e4"
+      },
+      "after": {
+        "path": "src/metrics.py",
+        "kind": "file",
+        "name": "src/metrics.py",
+        "qualifiedName": "src/metrics.py",
+        "hash": "f30e64477774f110b27897339ded07208f657c78",
+        "shape": "accfceedfb7f30ddf161af1b28a8369ef3c0eb8c879f8849ed261ff83cf498f6",
+        "language": "python",
+        "startLine": 1,
+        "complexity": 1,
+        "id": "2854958d762638eac243cf2445b6797b409320cf5af34a7c50a4048d781787e4"
+      }
+    },
+    {
+      "commit": "f5cbf88018970626328fd80ba03eced9047a996f",
+      "id": "7047446222010452739430d8642900b0c126dcfb2ab481d44863ddc7bcb5906d",
+      "kind": "function",
+      "action": "modified",
+      "matchedBy": "qualified-name",
+      "before": {
+        "kind": "function",
+        "syntaxKind": "function_definition",
+        "name": "count",
+        "qualifiedName": "count",
+        "start": 0,
+        "end": 56,
+        "startLine": 1,
+        "endLine": 2,
+        "hash": "b6a59f7167c3a1a4e8e59d7130bc4a4470371d38d2eca1b5ebf04e930583e570",
+        "parameters": 1,
+        "complexity": 1,
+        "shape": "51b00abdde6a212eb7e42daf538c6b815021f6603a3322a58b0d06c223c8c5eb",
+        "editHash": "b377a8793fffdc8c48b978742c9601b2cecb7ec189809fd10b7e73edb4594c36",
+        "path": "src/metrics.py",
+        "language": "python",
+        "id": "7047446222010452739430d8642900b0c126dcfb2ab481d44863ddc7bcb5906d"
+      },
+      "after": {
+        "kind": "function",
+        "syntaxKind": "function_definition",
+        "name": "count",
+        "qualifiedName": "count",
+        "start": 0,
+        "end": 46,
+        "startLine": 1,
+        "endLine": 2,
+        "hash": "a8ff843e5af620bbc55119414f26c13437fcbf508b1c765652a12be54bb5987d",
+        "parameters": 1,
+        "complexity": 1,
+        "shape": "3fbb3563c2f884c2e23e00b8259374f9ef3ae5603579a0fb0d1cb8a5a6dbe10e",
+        "editHash": "3fbb3563c2f884c2e23e00b8259374f9ef3ae5603579a0fb0d1cb8a5a6dbe10e",
+        "path": "src/metrics.py",
+        "language": "python",
+        "id": "7047446222010452739430d8642900b0c126dcfb2ab481d44863ddc7bcb5906d"
+      }
+    },
+    {
+      "commit": "f5cbf88018970626328fd80ba03eced9047a996f",
+      "id": "64b8cb400722e86866233227fd7caed00096eebe50677ef738165016e26931ad",
+      "kind": "file",
+      "action": "deleted",
+      "before": {
+        "path": "src/cache.js",
+        "kind": "file",
+        "name": "src/cache.js",
+        "qualifiedName": "src/cache.js",
+        "hash": "71be0b7cbe802894b44c8ab946ba7fd7499028c2",
+        "shape": "a56ffeac7bec40690d10ef61edd5e45ad7ed7dc6cba75525e036d2689d8073fc",
+        "language": "javascript",
+        "startLine": 1,
+        "complexity": 1,
+        "id": "64b8cb400722e86866233227fd7caed00096eebe50677ef738165016e26931ad"
+      }
+    },
+    {
+      "commit": "f5cbf88018970626328fd80ba03eced9047a996f",
+      "id": "3b05e8b32029b75b73c1e5f0f0a90373b4d42ea473219ab228ddbb9d11405bc2",
+      "kind": "function",
+      "action": "deleted",
+      "before": {
+        "kind": "function",
+        "syntaxKind": "function_declaration",
+        "name": "cached",
+        "qualifiedName": "cached",
+        "start": 7,
+        "end": 47,
+        "startLine": 1,
+        "endLine": 1,
+        "hash": "f5ffba3a64ad97eb13865c33080a529ebe1d4fc08a60d9e7198e8f42709cc3a9",
+        "parameters": 1,
+        "complexity": 1,
+        "shape": "7e3ebe2644d49e4264c514bd660a6a43caebff8cde1a0a418ccdf99b1d60d8d4",
+        "editHash": "7e3ebe2644d49e4264c514bd660a6a43caebff8cde1a0a418ccdf99b1d60d8d4",
+        "path": "src/cache.js",
+        "language": "javascript",
+        "id": "3b05e8b32029b75b73c1e5f0f0a90373b4d42ea473219ab228ddbb9d11405bc2"
+      }
+    }
+  ],
+  "current": [
+    {
+      "path": "src/formatter.js",
+      "kind": "file",
+      "name": "src/formatter.js",
+      "qualifiedName": "src/formatter.js",
+      "hash": "709a463fd016f5041655a6b36f0d8c3b6c6b22e8",
+      "shape": "b61a85823dfe8e2cdd0a8ff771768cfc0922a6c55efdf9580e5d597850e47cca",
+      "language": "javascript",
+      "startLine": 1,
+      "complexity": 2,
+      "id": "2e9673475d2473eeddd7f12ab30e140ee443ce5c5b02bfcfa771042a2dd82959"
+    },
+    {
+      "kind": "class",
+      "syntaxKind": "class_declaration",
+      "name": "Formatter",
+      "qualifiedName": "Formatter",
+      "start": 7,
+      "end": 73,
+      "startLine": 1,
+      "endLine": 1,
+      "hash": "18441f134c87788d5cbe27c3f2c8bd9889500596c06c1963590680f1e7eb13bc",
+      "parameters": 0,
+      "complexity": 1,
+      "shape": "c9b6fec5e6096a433f69b87526660b7291e9cbcee02307b8faaf6cd81e4ecbad",
+      "editHash": "c9b6fec5e6096a433f69b87526660b7291e9cbcee02307b8faaf6cd81e4ecbad",
+      "path": "src/formatter.js",
+      "language": "javascript",
+      "id": "0858bc9404191cc57b613bb0b8aec44afb58e32d3c7325f9cb0fb49c2d0a5a83"
+    },
+    {
+      "kind": "function",
+      "syntaxKind": "method_definition",
+      "name": "format",
+      "qualifiedName": "Formatter.format",
+      "start": 25,
+      "end": 71,
+      "startLine": 1,
+      "endLine": 1,
+      "hash": "b4719355a82cd13eb401d9935b1396c917b24488828af31a121d699fbb0d513b",
+      "parameters": 1,
+      "complexity": 1,
+      "shape": "919686762fa61443a35c5d86ae3f7cf264fc6f5367dab1e5670ba8c0bb9a0277",
+      "editHash": "919686762fa61443a35c5d86ae3f7cf264fc6f5367dab1e5670ba8c0bb9a0277",
+      "path": "src/formatter.js",
+      "language": "javascript",
+      "id": "6552ed8ea0a89c5143d0aa9f18c1892fcf48daa405f456ff761880696a6f0366"
+    },
+    {
+      "path": "src/metrics.py",
+      "kind": "file",
+      "name": "src/metrics.py",
+      "qualifiedName": "src/metrics.py",
+      "hash": "f30e64477774f110b27897339ded07208f657c78",
+      "shape": "accfceedfb7f30ddf161af1b28a8369ef3c0eb8c879f8849ed261ff83cf498f6",
+      "language": "python",
+      "startLine": 1,
+      "complexity": 1,
+      "id": "2854958d762638eac243cf2445b6797b409320cf5af34a7c50a4048d781787e4"
+    },
+    {
+      "kind": "function",
+      "syntaxKind": "function_definition",
+      "name": "count",
+      "qualifiedName": "count",
+      "start": 0,
+      "end": 46,
+      "startLine": 1,
+      "endLine": 2,
+      "hash": "a8ff843e5af620bbc55119414f26c13437fcbf508b1c765652a12be54bb5987d",
+      "parameters": 1,
+      "complexity": 1,
+      "shape": "3fbb3563c2f884c2e23e00b8259374f9ef3ae5603579a0fb0d1cb8a5a6dbe10e",
+      "editHash": "3fbb3563c2f884c2e23e00b8259374f9ef3ae5603579a0fb0d1cb8a5a6dbe10e",
+      "path": "src/metrics.py",
+      "language": "python",
+      "id": "7047446222010452739430d8642900b0c126dcfb2ab481d44863ddc7bcb5906d"
+    },
+    {
+      "path": "src/normalize.js",
+      "kind": "file",
+      "name": "src/normalize.js",
+      "qualifiedName": "src/normalize.js",
+      "hash": "04581b87aaf5e3ec3007443aeb91f1602f1ff16c",
+      "shape": "06c5a9094cc294c55da10f4879be5da04a87128427828059e57ff2c2188c6716",
+      "language": "javascript",
+      "startLine": 1,
+      "complexity": 5,
+      "id": "4611d04926ab7eebb45d61deb7731ca9c6813065817cd49792cba6d2dd26d4fa"
+    },
+    {
+      "kind": "function",
+      "syntaxKind": "function_declaration",
+      "name": "label",
+      "qualifiedName": "label",
+      "start": 7,
+      "end": 56,
+      "startLine": 1,
+      "endLine": 1,
+      "hash": "fd4d8d802396881bafa37c362643bf59c24aa78ee85e256eda2e6d203a66d5cb",
+      "parameters": 1,
+      "complexity": 2,
+      "shape": "3c1ac328efa60bfe76d8af60967aff2e512c2a8bc72bab37fb62fef57ffce84c",
+      "editHash": "86c40b5842642ceb6c73d85c2da75aab5399c3356eb82b70bc2e39f30a2f0b7a",
+      "path": "src/normalize.js",
+      "language": "javascript",
+      "id": "674e7544bd8749bb3f72d25ceb2cbd10744d00938afe10082d5a8dcef633a563"
+    },
+    {
+      "kind": "function",
+      "syntaxKind": "function_declaration",
+      "name": "title",
+      "qualifiedName": "title",
+      "start": 64,
+      "end": 111,
+      "startLine": 2,
+      "endLine": 2,
+      "hash": "983c05af7c1561a405245a4ae8cbb5a46acefbd257b9acca5fdce08b3d44dfee",
+      "parameters": 1,
+      "complexity": 2,
+      "shape": "3c1ac328efa60bfe76d8af60967aff2e512c2a8bc72bab37fb62fef57ffce84c",
+      "editHash": "86c40b5842642ceb6c73d85c2da75aab5399c3356eb82b70bc2e39f30a2f0b7a",
+      "path": "src/normalize.js",
+      "language": "javascript",
+      "id": "810d4134c3ed6bd5452285186ecaba7c8ba0e5f3a9630e819ca5236608c28238"
+    },
+    {
+      "kind": "function",
+      "syntaxKind": "function_declaration",
+      "name": "slug",
+      "qualifiedName": "slug",
+      "start": 119,
+      "end": 171,
+      "startLine": 3,
+      "endLine": 3,
+      "hash": "25942520158e35de7f2482624d1113f624b49f909b5ef7c4ae1e8915efb5ccbf",
+      "parameters": 1,
+      "complexity": 1,
+      "shape": "f49c9c25d61049b2572de08af2c3aed8c7dacc1b57deb4b878a03f1423f90153",
+      "editHash": "f49c9c25d61049b2572de08af2c3aed8c7dacc1b57deb4b878a03f1423f90153",
+      "path": "src/normalize.js",
+      "language": "javascript",
+      "id": "44fc61efb8c83a8eb128decdf43fbd431dfcb1a46b7dea9958d6ac1880f620c1"
+    }
+  ],
+  "hotspots": [
+    {
+      "path": "src/metrics.py",
+      "changes": 3
+    },
+    {
+      "path": "src/normalize.js",
+      "changes": 3
+    },
+    {
+      "path": "src/cache.js",
+      "changes": 2
+    },
+    {
+      "path": "src/format.js",
+      "changes": 2
+    },
+    {
+      "path": "src/formatter.js",
+      "changes": 1
+    }
+  ],
+  "coupling": [
+    {
+      "files": ["src/cache.js", "src/metrics.py"],
+      "commits": 2
+    },
+    {
+      "files": ["src/format.js", "src/normalize.js"],
+      "commits": 2
+    },
+    {
+      "files": ["src/metrics.py", "src/normalize.js"],
+      "commits": 2
+    }
+  ],
+  "repeatedPatterns": [
+    {
+      "id": "3b27131909625840a94af71c787127b18aeada0df023e3227f08ba023b6f4340",
+      "kind": "function",
+      "beforeShape": "9d59733e176ce5ef66bb428d714142a00f4fc487a87165b78cda37c39d28f08e",
+      "afterShape": "3c1ac328efa60bfe76d8af60967aff2e512c2a8bc72bab37fb62fef57ffce84c",
+      "count": 2,
+      "evidence": [
+        {
+          "commit": "3cbc8894b04fb1b5405b5e3113c1f276a95fb2b3",
+          "path": "src/normalize.js",
+          "id": "674e7544bd8749bb3f72d25ceb2cbd10744d00938afe10082d5a8dcef633a563"
+        },
+        {
+          "commit": "3cbc8894b04fb1b5405b5e3113c1f276a95fb2b3",
+          "path": "src/normalize.js",
+          "id": "810d4134c3ed6bd5452285186ecaba7c8ba0e5f3a9630e819ca5236608c28238"
+        }
+      ],
+      "complexityDelta": 0
+    }
+  ],
+  "suggestions": [
+    {
+      "patternId": "3b27131909625840a94af71c787127b18aeada0df023e3227f08ba023b6f4340",
+      "confidence": "observational",
+      "message": "Repeated structural edits may indicate a shared abstraction; review the linked transformations before applying a guideline",
+      "evidence": [
+        {
+          "commit": "3cbc8894b04fb1b5405b5e3113c1f276a95fb2b3",
+          "path": "src/normalize.js",
+          "id": "674e7544bd8749bb3f72d25ceb2cbd10744d00938afe10082d5a8dcef633a563"
+        },
+        {
+          "commit": "3cbc8894b04fb1b5405b5e3113c1f276a95fb2b3",
+          "path": "src/normalize.js",
+          "id": "810d4134c3ed6bd5452285186ecaba7c8ba0e5f3a9630e819ca5236608c28238"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "First-parent history only; merge side branches are not traversed",
+    "Renames use unique names, content or structure; ambiguous matches become deletion/addition",
+    "Pattern frequency is evidence, not proof that a change improves behavior",
+    "Coupling omits commits changing more than 100 source files"
+  ]
+}
