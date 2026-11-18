@@ -1,10 +1,17 @@
-# js-ai-driven-development-pipeline-template
+# Code Evolution
 
-A comprehensive template for AI-driven JavaScript/TypeScript development with full CI/CD pipeline support.
+Analyze Git history at the file, function and class level. Code Evolution tracks identity changes, counts repeated structural edits and links findings to their commits and source paths.
 
-This repository publishes the real test package
-`@link-foundation/example-package-name` so the template release pipeline is
-validated end to end with npm trusted publishing.
+```bash
+npm ci
+node bin/code-evolution.js /path/to/repository --max-commits 25 --output report.json
+```
+
+The typed library entry point is `@link-foundation/code-evolution/evolution`. The report viewer includes a reproducible five-commit example and accepts local JSON reports. [Library, CLI and demo guide](docs/evolution.md), [demo screenshot](docs/screenshots/code-evolution.png), [extraction case study](docs/case-studies/issue-1/README.md)
+
+## Development infrastructure
+
+This project inherits the JavaScript AI-driven development template and its CI/CD tooling. The template's calculator examples remain available for pipeline verification.
 
 ## Features
 
@@ -294,7 +301,7 @@ Add regex patterns to `.lycheeignore` to exclude URLs from checks (e.g., local d
 
 After creating a repository from this template, update the package name in:
 
-1. `package.json`: replace `"@link-foundation/example-package-name"` with your package name
+1. `package.json`: replace `"@link-foundation/code-evolution"` with your package name
 2. `.changeset/config.json`: Package references
 
 Release scripts derive the package name from `package.json` at runtime, so no

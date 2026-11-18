@@ -1,0 +1,12 @@
+en
+  commits "Commits"
+  changes "Changes"
+  hotspots "File hotspots"
+  patterns "Repeated patterns"
+  none "No matches in this report."
+  added "Added"
+  deleted "Deleted"
+  modified "Modified"
+  renamed "Renamed"
+  invalid "Open a valid Code Evolution JSON report under 8 MiB."
+  truncated "This report covers only the most recent part of the available history."
