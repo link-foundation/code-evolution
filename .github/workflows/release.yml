@@ -286,6 +286,20 @@ jobs:
       - name: Check code duplication
         run: npm run check:duplication
 
+      - name: Check out the pinned Code Quality consumer
+        uses: actions/checkout@v7
+        with:
+          repository: link-foundation/code-quality
+          ref: e0e2e03d8e78fee2119e6d272ebee4aef2505682
+          path: .code-quality-contract
+          sparse-checkout: |
+            bin
+            src
+          persist-credentials: false
+
+      - name: Verify packed evolution engine in Code Quality
+        run: node examples/code-quality-consumer/verify.mjs .code-quality-contract
+
   # Test matrix: 3 runtimes (Node.js, Bun, Deno) x 3 OS (Ubuntu, macOS, Windows)
   # IMPORTANT: Tests must validate the ACTUAL merge result, not a stale merge preview.
   # See docs/case-studies/issue-23 for why this is critical.
