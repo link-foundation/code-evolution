@@ -7,27 +7,27 @@
   "commits": [
     {
       "sha": "57583c74ae4ff44af9c298079fbaeece1bae59e6",
-      "date": "2026-06-02T12:00:00+00:00",
+      "date": "2026-06-02T12:00:00.000Z",
       "subject": "Introduce text formatting and metrics"
     },
     {
       "sha": "3cbc8894b04fb1b5405b5e3113c1f276a95fb2b3",
-      "date": "2026-06-05T12:00:00+00:00",
+      "date": "2026-06-05T12:00:00.000Z",
       "subject": "Simplify repeated default-value branches"
     },
     {
       "sha": "3ef49e932e9c93a8fec52b4519802112685b919e",
-      "date": "2026-06-08T12:00:00+00:00",
+      "date": "2026-06-08T12:00:00.000Z",
       "subject": "Add a slug and trim formatted output"
     },
     {
       "sha": "da1be2417d7c3dcd5bac5e065ee92ecee158d60d",
-      "date": "2026-06-12T12:00:00+00:00",
+      "date": "2026-06-12T12:00:00.000Z",
       "subject": "Move the formatter to a dedicated file"
     },
     {
       "sha": "f5cbf88018970626328fd80ba03eced9047a996f",
-      "date": "2026-06-17T12:00:00+00:00",
+      "date": "2026-06-17T12:00:00.000Z",
       "subject": "Remove the unused cache and count unique values"
     }
   ],

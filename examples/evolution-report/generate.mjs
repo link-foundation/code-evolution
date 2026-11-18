@@ -100,11 +100,22 @@ export async function withExampleHistory(callback) {
   }
 }
 
+export async function generateSampleReport() {
+  const report = await withExampleHistory(extractEvolution);
+  return {
+    ...report,
+    commits: report.commits.map((commit) => ({
+      ...commit,
+      date: new Date(commit.date).toISOString(),
+    })),
+  };
+}
+
 if (
   process.argv[1] &&
   import.meta.url === pathToFileURL(process.argv[1]).href
 ) {
-  const report = await withExampleHistory(extractEvolution);
+  const report = await generateSampleReport();
   const destination = new URL(
     '../universal-app/evolution/sample-report.json',
     import.meta.url

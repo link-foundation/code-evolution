@@ -52,4 +52,4 @@ npm run example:web:build
 npm run example:web:preview
 ```
 
-Open `/evolution/` on the printed local address. Explore the built-in history or choose **Open JSON** to inspect a report. The demo reads files up to 8 MiB in the browser. To recreate the built-in report byte for byte, run `node examples/evolution-report/generate.mjs` from the repository root.
+Open `/evolution/` on the printed local address. Explore the built-in history or choose **Open JSON** to inspect a report. The demo reads files up to 8 MiB in the browser. To recreate the built-in report byte for byte, run `node examples/evolution-report/generate.mjs` from the repository root. The sample generator writes dates in canonical UTC form so Git versions that spell the same offset differently produce identical sample JSON.

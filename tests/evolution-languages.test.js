@@ -2,10 +2,9 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { URL } from 'node:url';
 import { describe, it } from 'test-anywhere';
-import { extractEvolution } from '../src/evolution/index.js';
 import { detectLanguage } from '../src/evolution/languages.js';
 import { extractSyntax, withSyntax } from '../src/evolution/syntax.js';
-import { withExampleHistory } from '../examples/evolution-report/generate.mjs';
+import { generateSampleReport } from '../examples/evolution-report/generate.mjs';
 import { isReport } from '../examples/universal-app/evolution/report.js';
 import { languageFixtures } from './fixtures/evolution-languages.js';
 import { itUnless, sandboxed } from './helpers/skip.js';
@@ -33,7 +32,7 @@ describe('evolution input and report formats', () => {
   itUnless(sandboxed)(
     'reproduces the report shipped with the viewer',
     async () => {
-      const report = await withExampleHistory(extractEvolution);
+      const report = await generateSampleReport();
       const sample = await readFile(
         new URL(
           '../examples/universal-app/evolution/sample-report.json',
